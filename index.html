@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>compras</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Caja Registradora</h1>
+    
+        <div class="product-image">
+            <img src="panda.jpg" alt="Producto" id="productImage">
+        </div>
+    
+        <label for="product">Selecciona un producto:</label>
+        <select id="product">
+            <option value="PANDA" data-price="10">Producto 1 - $10</option>
+            <option value="AGUILA" data-price="15">Producto 2 - $15</option>
+            <option value="ESTRELLA" data-price="20">Producto 3 - $20</option>
+        </select>
+    
+        <label for="selectedProduct">Producto Seleccionado:</label>
+        <input type="text" id="selectedProduct" readonly>
+    
+        <label for="quantity">Cantidad:</label>
+        <input type="number" id="quantity" min="1" value="1">
+    
+        <label>Total Producto: <span id="productTotal">$10</span></label>
+    
+        <button id="addButton">Agregar a la factura</button>
+        <button id="clearButton">Borrar último</button>
+    
+        <div class="factura">
+            <h3>Factura</h3>
+            <ul id="invoiceList"></ul>
+            <strong>Total a pagar: $<span id="totalPrice">0</span></strong>
+        </div>
+    <script src="main.js"></script>
+</body>
+</html>
